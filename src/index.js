@@ -42,7 +42,7 @@ async function fetchImages(query) {
     }
 
     if (currentPage === 1) {
-      gallery.innerHTML = ''; // Clear existing images for a new search
+      gallery.innerHTML = '';
     }
 
     images.forEach(image => {
@@ -91,4 +91,4 @@ async function loadMoreImages() {
   await fetchImages(currentSearchQuery);
 }
 
-loadMoreBtn.style.display = 'none'; // Initially hide the load more button
+loadMoreBtn.style.display = 'none';
