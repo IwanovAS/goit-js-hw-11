@@ -71,24 +71,4 @@ function createImageCard(image) {
   img.alt = image.tags;
   img.loading = 'lazy';
 
-  const info = document.createElement('div');
-  info.className = 'info';
-  info.innerHTML = `
-    <p class="info-item"><b>Likes:</b> ${image.likes}</p>
-    <p class="info-item"><b>Views:</b> ${image.views}</p>
-    <p class="info-item"><b>Comments:</b> ${image.comments}</p>
-    <p class="info-item"><b>Downloads:</b> ${image.downloads}</p>
-  `;
-
-  card.appendChild(img);
-  card.appendChild(info);
-
-  return card;
-}
-
-async function loadMoreImages() {
-  currentPage++;
-  await fetchImages(currentSearchQuery);
-}
-
-loadMoreBtn.style.display = 'none';
+  
